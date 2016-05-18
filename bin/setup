@@ -1,0 +1,47 @@
+#!/usr/bin/env bash
+
+# Ask for the administrator password upfront.
+sudo -v
+
+# Useful variables.
+CREATE_DIRS=(~/dev)
+SCRIPT_PATH=$(cd $(dirname $0); pwd -P)
+
+# Install Homebrew. This is the recommended installation method from
+# http://brew.sh/ but is subject to change. It is recommended that you check
+# that page for updates to the command before running this script.
+if [[ ! "$(which brew)" ]]; then
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+fi
+
+# Install software from Homebrew.
+${SCRIPT_PATH}/install-homebrew-formulae
+${SCRIPT_PATH}/install-homebrew-casks
+
+# Add Homebrew Zsh to shells and switch to it.
+sudo sh -c "echo "$(brew --prefix)/bin/zsh" >> /etc/shells"
+sudo chsh -s "$(brew --prefix)/bin/zsh" $USER
+
+# Install Oh My Zsh.
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+# Make useful directories.
+for dir in "${CREATE_DIRS[@]}"; do
+  if [ ! -d "$dir" ]; then
+    mkdir $dir
+  fi
+done
+
+# Copy dotfiles to the home directory.
+cp -r copy/home/. ~/
+
+# Install fonts. The fonts included in this repository include Powerline fonts
+# from https://github.com/powerline/fonts which are required for the desired
+# Vim setup.
+cp -r copy/fonts/. ~/Library/Fonts/
+
+# Set up Vim and install plugins.
+vim +PluginInstall +qall
+
+# Configure OS X.
+sudo ${SCRIPT_PATH}/osx
