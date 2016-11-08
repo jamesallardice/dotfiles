@@ -4,6 +4,9 @@ export ZSH=/Users/jallardice/.oh-my-zsh
 # Check for updates every day instead of every 2 weeks.
 export UPDATE_ZSH_DAYS=1
 
+# Default Node version.
+export NODE_VERSION=6
+
 # Set name of the theme to load.
 ZSH_THEME="jallardice"
 
@@ -18,12 +21,7 @@ HIST_STAMPS="mm/dd/yyyy"
 
 # Load Oh My Zsh plugins. Be wary of adding too many as it will slow down shell
 # startup.
-plugins=(git node npm brew osx redis-cli sudo emoji)
-
-# Source nvm. This needs to happen before sourcing Oh My Zsh because the custom
-# Oh My Zsh theme relies on Node.
-export NVM_DIR="$HOME/.nvm"
-. "$(brew --prefix nvm)/nvm.sh"
+plugins=(git node npm brew osx redis-cli sudo emoji colorize)
 
 source $ZSH/oh-my-zsh.sh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -36,15 +34,22 @@ unsetopt share_history
 
 # Add Homebrew utils to path so they can be used with their real names instead
 # of having to include prefixes.
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-export MANPATH="/usr/local/man:$MANPATH"
+PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
+MANPATH="/usr/local/man:$MANPATH"
 PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"
 MANPATH="/usr/local/opt/findutils/libexec/gnuman:$MANPATH"
+PATH="/usr/local/opt/gnu-tar/libexec/gnubin:$PATH"
+MANPATH="/usr/local/opt/gnu-tar/libexec/gnuman:$MANPATH"
 
 # Add custom binaries to path.
 PATH="/Users/jallardice/bin:$PATH"
+
+# Source nvm.
+export NVM_DIR="$HOME/.nvm"
+. "$(brew --prefix nvm)/nvm.sh"
+nvm use $NODE_VERSION
 
 # Initialise rbenv.
 eval "$(rbenv init -)"

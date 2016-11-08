@@ -1,4 +1,5 @@
 local ret_status="%(?:$emoji[grinning_face] :$emoji[loudly_crying_face] )"
+NEWLINE=$'\n'
 PROMPT='${ret_status} %{$fg_bold[cyan]%}%c%{$reset_color%} $(git_prompt_info)'
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[blue]%}git:(%{$fg[red]%}"
