@@ -130,16 +130,16 @@ let maplocalleader = '\\'
 nnoremap ; :
 
 " Viewport navigation
-nnoremap <c-h> <c-w>h
-nnoremap <c-j> <c-w>j
-nnoremap <c-k> <c-w>k
-nnoremap <c-l> <c-w>l
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 
 " Viewport relocation
-nnoremap <leader>h <c-w>H
-nnoremap <leader>j <c-w>J
-nnoremap <leader>k <c-w>K
-nnoremap <leader>l <c-w>L
+nnoremap <leader>h <C-w>H
+nnoremap <leader>j <C-w>J
+nnoremap <leader>k <C-w>K
+nnoremap <leader>l <C-w>L
 
 " Map Ctrl+C to escape
 inoremap <C-c> <esc>
@@ -148,10 +148,10 @@ inoremap <C-c> <esc>
 nnoremap <CR> :noh<CR>
 
 " Open .vimrc in vertical split
-nnoremap <leader>ev :vs $MYVIMRC<cr>
+nnoremap <leader>ev :vs $MYVIMRC<CR>
 
 " Quicker Syntastic errors view
-nnoremap <leader>err :Errors<cr>
+nnoremap <leader>err :Errors<CR>
 
 "
 " Plugin configuration
