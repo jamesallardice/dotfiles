@@ -18,6 +18,10 @@ fi
 ${SCRIPT_PATH}/install-homebrew-formulae
 ${SCRIPT_PATH}/install-homebrew-casks
 
+# Install software from source (things that are not available through Homebrew,
+# or things that I need more control over).
+${SCRIPT_PATH}/build-from-source
+
 # Add Homebrew Zsh to shells and switch to it.
 sudo sh -c "echo "$(brew --prefix)/bin/zsh" >> /etc/shells"
 sudo chsh -s "$(brew --prefix)/bin/zsh" $USER

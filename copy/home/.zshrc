@@ -25,6 +25,7 @@ plugins=(git node npm brew osx redis-cli sudo emoji colorize)
 
 source $ZSH/oh-my-zsh.sh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/local/opt/ansible/hacking/env-setup > /dev/null 2>&1
 
 # Custom aliases.
 alias lss="ls -Alsh --color"
