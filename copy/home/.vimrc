@@ -17,7 +17,6 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/syntastic'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'pangloss/vim-javascript'
@@ -28,6 +27,7 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
 Plugin 'digitaltoad/vim-pug'
+Plugin 'w0rp/ale'
 
 call vundle#end()
 
@@ -150,27 +150,14 @@ nnoremap <CR> :noh<CR>
 " Open .vimrc in vertical split
 nnoremap <leader>ev :vs $MYVIMRC<CR>
 
-" Quicker Syntastic errors view
-nnoremap <leader>err :Errors<CR>
-
 "
 " Plugin configuration
 "
 
 " Airline settings
 let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#syntastic#enabled = 1
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'badwolf'
-
-" Syntastic settings
-let g:syntastic_mode_map = { 'mode': 'active',
-                           \ 'active_filetypes': ['javascript'] }
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 0
-let g:syntastic_check_on_open = 1
-let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_enable_signs = 1
 
 " Completion settings
 set completeopt-=preview
