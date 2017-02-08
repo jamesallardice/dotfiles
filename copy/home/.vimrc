@@ -28,6 +28,7 @@ Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
 Plugin 'digitaltoad/vim-pug'
 Plugin 'w0rp/ale'
+Plugin 'ekalinin/Dockerfile.vim'
 
 call vundle#end()
 
