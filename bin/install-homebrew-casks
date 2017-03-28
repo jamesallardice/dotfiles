@@ -6,6 +6,7 @@ brew cask install arq
 brew cask install dropbox
 brew cask install utorrent
 brew cask install vlc
+brew cask install karabiner-elements
 
 # Development stuff.
 brew cask install iterm2-nightly
