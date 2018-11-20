@@ -29,6 +29,7 @@ Plugin 'xolox/vim-easytags'
 Plugin 'digitaltoad/vim-pug'
 Plugin 'w0rp/ale'
 Plugin 'ekalinin/Dockerfile.vim'
+Plugin 'leafgarland/typescript-vim'
 
 call vundle#end()
 
