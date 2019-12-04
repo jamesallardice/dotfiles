@@ -7,6 +7,9 @@ export UPDATE_ZSH_DAYS=1
 # Default Node version.
 export NODE_VERSION=10
 
+# Touchbar plugins.
+export TOUCHBAR_GIT_ENABLED=true
+
 # Set name of the theme to load.
 ZSH_THEME="jallardice"
 
@@ -21,7 +24,7 @@ HIST_STAMPS="mm/dd/yyyy"
 
 # Load Oh My Zsh plugins. Be wary of adding too many as it will slow down shell
 # startup.
-plugins=(git node npm brew osx redis-cli sudo emoji colorize)
+plugins=(git node npm brew osx redis-cli sudo emoji colorize zsh-iterm-touchbar)
 
 source $ZSH/oh-my-zsh.sh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
