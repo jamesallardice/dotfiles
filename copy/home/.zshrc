@@ -5,7 +5,7 @@ export ZSH=/Users/jallardice/.oh-my-zsh
 export UPDATE_ZSH_DAYS=1
 
 # Default Node version.
-export NODE_VERSION=6
+export NODE_VERSION=10
 
 # Set name of the theme to load.
 ZSH_THEME="jallardice"
