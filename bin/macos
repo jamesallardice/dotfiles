@@ -1,7 +1,14 @@
 #!/usr/bin/env bash
-# Modified from http://mths.be/osx
+# Modified from https://mths.be/macos
 
-# Keep-alive: update existing `sudo` time stamp until `.osx` has finished.
+# Close any open System Preferences panes, to prevent them from overriding
+# settings we’re about to change
+osascript -e 'tell application "System Preferences" to quit'
+
+# Ask for the administrator password upfront
+sudo -v
+
+# Keep-alive: update existing `sudo` time stamp until `macos` has finished.
 while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Set computer name. 
@@ -129,16 +136,7 @@ defaults write com.apple.dock autohide -bool true
 # Don't display the annoying prompt when quitting iTerm
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
 
-# Twitter: disable smart quotes as it's annoying for code tweets
-defaults write com.twitter.twitter-mac AutomaticQuoteSubstitutionEnabled -bool false
-
-# Twitter: show the app window when clicking the menu bar icon
-defaults write com.twitter.twitter-mac MenuItemBehavior -int 1
-
-# Allow closing the 'new tweet' window by pressing `Esc`
-defaults write com.twitter.twitter-mac ESCClosesComposeWindow -bool true
-
 # Kill all affected applications
-for app in "cfprefsd" "Dock" "Finder" "SystemUIServer" "Twitter"; do
+for app in "cfprefsd" "Dock" "Finder" "SystemUIServer"; do
   killall "${app}" > /dev/null 2>&1
 done
