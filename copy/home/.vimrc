@@ -189,3 +189,6 @@ nnoremap <CR> :noh<CR>
 nnoremap <leader>gs :<C-u>Gstatus<CR>
 nnoremap <leader>gb :<C-u>Gblame<CR>
 nnoremap <leader>gd :<C-u>Gdiff<CR>
+
+" Custom command to pretty-print a whole JSON file.
+command Json execute "%!python -m json.tool"
