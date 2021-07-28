@@ -45,7 +45,7 @@ cp -r copy/home/. ~/
 cp -r copy/fonts/. ~/Library/Fonts/
 
 # Set up Vim and install plugins.
-vim +PluginInstall +qall
+vim +PlugInstall +qall
 
 # Configure OS X.
 sudo ${SCRIPT_PATH}/osx
