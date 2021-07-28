@@ -135,8 +135,12 @@ defaults write com.apple.dock autohide-delay -float 0
 # Dock: automatically hide and show
 defaults write com.apple.dock autohide -bool true
 
-# Don't display the annoying prompt when quitting iTerm
+# iTerm:
+#
+# - Don't display the annoying prompt when quitting
+# - Don't show title bars on split panes within tabs/windows
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false
+defaults write com.googlecode.iterm2 ShowPaneTitles -bool false
 
 # Kill all affected applications
 for app in "cfprefsd" "Dock" "Finder" "SystemUIServer"; do
