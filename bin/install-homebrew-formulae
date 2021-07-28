@@ -5,23 +5,20 @@ brew update
 brew upgrade
 
 # Install core utilities as those that ship with OS X are out of date.
-brew install coreutils --with-default-names
-brew install findutils --with-default-names
-brew install gnu-sed --with-default-names
-brew install wget --with-iri
+brew install coreutils
+brew install findutils
+brew install gnu-sed
+brew install wget
 
 # Install Zsh.
 brew install zsh
 brew install zsh-syntax-highlighting
 
 # Install more recent versions of some OS X tools.
-brew install vim --override-system-vi
-brew install homebrew/dupes/grep --with-default-names
-brew install homebrew/dupes/openssh
+brew install vim
 
 # More useful formulae.
 brew install git
 brew install nvm
 brew install rbenv
 brew install the_silver_searcher
-brew install unrar

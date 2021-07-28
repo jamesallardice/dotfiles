@@ -1,16 +1,14 @@
 #!/usr/bin/env bash
 
 # General stuff.
-brew cask install 1password
-brew cask install arq
-brew cask install dropbox
-brew cask install utorrent
-brew cask install vlc
-brew cask install karabiner-elements
+brew install --cask 1password
+brew install --cask dropbox
+brew install --cask vlc
+brew install --cask rectangle
 
 # Development stuff.
-brew cask install iterm2-nightly
-brew cask install postman
-brew cask install slack
-brew cask install virtualbox
-brew cask install docker
+brew install --cask iterm2-nightly
+brew install --cask postman
+brew install --cask slack
+brew install --cask virtualbox
+brew install --cask docker
