@@ -11,7 +11,7 @@ SCRIPT_PATH=$(cd $(dirname $0); pwd -P)
 # http://brew.sh/ but is subject to change. It is recommended that you check
 # that page for updates to the command before running this script.
 if [[ ! "$(which brew)" ]]; then
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
 
 # Install software from Homebrew.
