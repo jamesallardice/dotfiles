@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-
-# Checkout Ansible. I work with various projects that require specific Ansible
-# versions so it's easiest to have the whole repo and just checkout a specific
-# tag if and when I need it.
-git clone https://github.com/ansible/ansible.git /usr/local/opt/ansible/
