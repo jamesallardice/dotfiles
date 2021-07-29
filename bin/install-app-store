@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+# Installs apps from the Mac App Store via mas (https://github.com/mas-cli/mas).
+# The mas CLI requires an app identifier, rather than a name. Identifiers are
+# found via the `mas search [name]` command.
+
+ids=(
+  497799835 # Xcode
+  1510445899 # Meeter
+)
+
+for id in ${ids[@]}; do
+  mas install $id
+done

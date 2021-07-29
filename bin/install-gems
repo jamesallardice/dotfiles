@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# Install Ruby gems.
+
+gems=(
+  cocoapods
+)
+
+for gem in ${gems[@]}; do
+  sudo gem install $gem
+done

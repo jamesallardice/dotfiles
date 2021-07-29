@@ -18,6 +18,15 @@ fi
 ${SCRIPT_PATH}/install-homebrew-formulae
 ${SCRIPT_PATH}/install-homebrew-casks
 
+# Install software from the Mac App Store.
+${SCRIPT_PATH}/install-app-store
+
+# Install Ruby gems.
+${SCRIPT_PATH}/install-gems
+
+# Configure Xcode after installation. Without this the "active developer 
+# directory" points to a Command Line Tools instance rather than Xcode itself.
+sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
 
 # Add Homebrew Zsh to shells and switch to it.
 sudo sh -c "echo "$(brew --prefix)/bin/zsh" >> /etc/shells"
