@@ -7,6 +7,7 @@ brew install --cask vlc
 brew install --cask rectangle
 brew install --cask figma
 brew install --cask krisp
+brew install --cask zoom
 
 # Development stuff.
 brew install --cask iterm2-nightly
