@@ -24,7 +24,7 @@ HIST_STAMPS="mm/dd/yyyy"
 
 # Load Oh My Zsh plugins. Be wary of adding too many as it will slow down shell
 # startup.
-plugins=(git node npm brew osx redis-cli sudo emoji colorize)
+plugins=(git node npm brew macos redis-cli sudo emoji colorize)
 
 source $ZSH/oh-my-zsh.sh
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
