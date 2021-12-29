@@ -8,6 +8,7 @@ brew install --cask rectangle
 brew install --cask figma
 brew install --cask krisp
 brew install --cask zoom
+brew install --cask notion
 
 # Development stuff.
 brew install --cask iterm2
