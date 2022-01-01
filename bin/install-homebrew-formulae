@@ -25,3 +25,4 @@ brew install the_silver_searcher
 brew install yarn
 brew install mas
 brew install awscli
+brew install jsonlint
