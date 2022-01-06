@@ -6,6 +6,6 @@ gems=(
   cocoapods
 )
 
-for gem in ${gems[@]}; do
-  sudo gem install $gem
+for gem in "${gems[@]}"; do
+  gem install "$gem"
 done
