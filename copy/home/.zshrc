@@ -32,6 +32,11 @@ source /usr/local/opt/ansible/hacking/env-setup > /dev/null 2>&1
 
 # Custom aliases.
 alias lss="ls -Alsh --color"
+alias cat='bat'
+alias gcn='gc --amend --no-edit'
+alias gcnn='gcn --no-verify'
+alias gpfn='gpf --no-verify'
+alias gdc='gd --cached'
 
 # Separate history for each session
 unsetopt share_history
