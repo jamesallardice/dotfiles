@@ -5,7 +5,7 @@ export ZSH=/Users/jallardice/.oh-my-zsh
 export UPDATE_ZSH_DAYS=1
 
 # Default Node version.
-export NODE_VERSION=14
+export NODE_VERSION=16
 
 # Touchbar plugins.
 export TOUCHBAR_GIT_ENABLED=true
