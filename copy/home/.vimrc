@@ -186,9 +186,9 @@ nnoremap <CR> :noh<CR>
 " Mappings for vim-fugitive to allow easier access to git from within the
 " editor. There are plenty more that we could add here but I tend not to use
 " git to the max within the editor.
-nnoremap <leader>gs :<C-u>Gstatus<CR>
-nnoremap <leader>gb :<C-u>Gblame<CR>
-nnoremap <leader>gd :<C-u>Gdiff<CR>
+nnoremap <leader>gs :<C-u>Git<CR>
+nnoremap <leader>gb :<C-u>Git blame<CR>
+nnoremap <leader>gd :<C-u>Git diff<CR>
 
 " Custom command to pretty-print a whole JSON file.
 command Json execute "%!python -m json.tool"
